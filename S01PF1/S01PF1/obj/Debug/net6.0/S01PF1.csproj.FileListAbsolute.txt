@@ -1,0 +1,14 @@
+C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S01PF1\S01PF1\bin\Debug\net6.0\S01PF1.exe
+C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S01PF1\S01PF1\bin\Debug\net6.0\S01PF1.deps.json
+C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S01PF1\S01PF1\bin\Debug\net6.0\S01PF1.runtimeconfig.json
+C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S01PF1\S01PF1\bin\Debug\net6.0\S01PF1.dll
+C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S01PF1\S01PF1\bin\Debug\net6.0\S01PF1.pdb
+C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S01PF1\S01PF1\obj\Debug\net6.0\S01PF1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S01PF1\S01PF1\obj\Debug\net6.0\S01PF1.AssemblyInfoInputs.cache
+C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S01PF1\S01PF1\obj\Debug\net6.0\S01PF1.AssemblyInfo.cs
+C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S01PF1\S01PF1\obj\Debug\net6.0\S01PF1.csproj.CoreCompileInputs.cache
+C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S01PF1\S01PF1\obj\Debug\net6.0\S01PF1.dll
+C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S01PF1\S01PF1\obj\Debug\net6.0\refint\S01PF1.dll
+C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S01PF1\S01PF1\obj\Debug\net6.0\S01PF1.pdb
+C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S01PF1\S01PF1\obj\Debug\net6.0\S01PF1.genruntimeconfig.cache
+C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S01PF1\S01PF1\obj\Debug\net6.0\ref\S01PF1.dll
