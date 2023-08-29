@@ -1,0 +1,14 @@
+C:\Users\Pablo\Documents\C#\S02PF1\SuperHeroes\SuperHeroes\bin\Debug\net6.0\SuperHeroes.exe
+C:\Users\Pablo\Documents\C#\S02PF1\SuperHeroes\SuperHeroes\bin\Debug\net6.0\SuperHeroes.deps.json
+C:\Users\Pablo\Documents\C#\S02PF1\SuperHeroes\SuperHeroes\bin\Debug\net6.0\SuperHeroes.runtimeconfig.json
+C:\Users\Pablo\Documents\C#\S02PF1\SuperHeroes\SuperHeroes\bin\Debug\net6.0\SuperHeroes.dll
+C:\Users\Pablo\Documents\C#\S02PF1\SuperHeroes\SuperHeroes\bin\Debug\net6.0\SuperHeroes.pdb
+C:\Users\Pablo\Documents\C#\S02PF1\SuperHeroes\SuperHeroes\obj\Debug\net6.0\SuperHeroes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pablo\Documents\C#\S02PF1\SuperHeroes\SuperHeroes\obj\Debug\net6.0\SuperHeroes.AssemblyInfoInputs.cache
+C:\Users\Pablo\Documents\C#\S02PF1\SuperHeroes\SuperHeroes\obj\Debug\net6.0\SuperHeroes.AssemblyInfo.cs
+C:\Users\Pablo\Documents\C#\S02PF1\SuperHeroes\SuperHeroes\obj\Debug\net6.0\SuperHeroes.csproj.CoreCompileInputs.cache
+C:\Users\Pablo\Documents\C#\S02PF1\SuperHeroes\SuperHeroes\obj\Debug\net6.0\SuperHeroes.dll
+C:\Users\Pablo\Documents\C#\S02PF1\SuperHeroes\SuperHeroes\obj\Debug\net6.0\refint\SuperHeroes.dll
+C:\Users\Pablo\Documents\C#\S02PF1\SuperHeroes\SuperHeroes\obj\Debug\net6.0\SuperHeroes.pdb
+C:\Users\Pablo\Documents\C#\S02PF1\SuperHeroes\SuperHeroes\obj\Debug\net6.0\SuperHeroes.genruntimeconfig.cache
+C:\Users\Pablo\Documents\C#\S02PF1\SuperHeroes\SuperHeroes\obj\Debug\net6.0\ref\SuperHeroes.dll
