@@ -8,23 +8,23 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Pablo\\.nuget\\packages\\": {},
+    "C:\\Users\\pabab\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pablo\\Documents\\C#\\IFTSPOO\\S03A3\\S03A2\\S03A3.csproj",
+      "projectUniqueName": "C:\\Users\\pabab\\OneDrive\\Documentos\\IFTSPOO\\S03A3\\S03A2\\S03A3.csproj",
       "projectName": "S03A3",
-      "projectPath": "C:\\Users\\Pablo\\Documents\\C#\\IFTSPOO\\S03A3\\S03A2\\S03A3.csproj",
-      "packagesPath": "C:\\Users\\Pablo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pablo\\Documents\\C#\\IFTSPOO\\S03A3\\S03A2\\obj\\",
+      "projectPath": "C:\\Users\\pabab\\OneDrive\\Documentos\\IFTSPOO\\S03A3\\S03A2\\S03A3.csproj",
+      "packagesPath": "C:\\Users\\pabab\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pabab\\OneDrive\\Documentos\\IFTSPOO\\S03A3\\S03A2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\pabab\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
