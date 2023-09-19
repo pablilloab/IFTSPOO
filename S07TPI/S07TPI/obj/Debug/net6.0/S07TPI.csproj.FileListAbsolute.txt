@@ -1,0 +1,14 @@
+C:\Users\Pablo\Documents\C#\IFTSPOO\S07TPI\S07TPI\bin\Debug\net6.0\S07TPI.exe
+C:\Users\Pablo\Documents\C#\IFTSPOO\S07TPI\S07TPI\bin\Debug\net6.0\S07TPI.deps.json
+C:\Users\Pablo\Documents\C#\IFTSPOO\S07TPI\S07TPI\bin\Debug\net6.0\S07TPI.runtimeconfig.json
+C:\Users\Pablo\Documents\C#\IFTSPOO\S07TPI\S07TPI\bin\Debug\net6.0\S07TPI.dll
+C:\Users\Pablo\Documents\C#\IFTSPOO\S07TPI\S07TPI\bin\Debug\net6.0\S07TPI.pdb
+C:\Users\Pablo\Documents\C#\IFTSPOO\S07TPI\S07TPI\obj\Debug\net6.0\S07TPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pablo\Documents\C#\IFTSPOO\S07TPI\S07TPI\obj\Debug\net6.0\S07TPI.AssemblyInfoInputs.cache
+C:\Users\Pablo\Documents\C#\IFTSPOO\S07TPI\S07TPI\obj\Debug\net6.0\S07TPI.AssemblyInfo.cs
+C:\Users\Pablo\Documents\C#\IFTSPOO\S07TPI\S07TPI\obj\Debug\net6.0\S07TPI.csproj.CoreCompileInputs.cache
+C:\Users\Pablo\Documents\C#\IFTSPOO\S07TPI\S07TPI\obj\Debug\net6.0\S07TPI.dll
+C:\Users\Pablo\Documents\C#\IFTSPOO\S07TPI\S07TPI\obj\Debug\net6.0\refint\S07TPI.dll
+C:\Users\Pablo\Documents\C#\IFTSPOO\S07TPI\S07TPI\obj\Debug\net6.0\S07TPI.pdb
+C:\Users\Pablo\Documents\C#\IFTSPOO\S07TPI\S07TPI\obj\Debug\net6.0\S07TPI.genruntimeconfig.cache
+C:\Users\Pablo\Documents\C#\IFTSPOO\S07TPI\S07TPI\obj\Debug\net6.0\ref\S07TPI.dll
