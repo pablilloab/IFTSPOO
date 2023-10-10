@@ -10,7 +10,7 @@ namespace S07TPI
     {
         private string nombre;
         private string dni;
-        public List<Libro> prestamoLibros;
+        private List<Libro> prestamoLibros;
         private int cantPrestamos;
 
         //Constructor de clase
@@ -39,6 +39,11 @@ namespace S07TPI
         {
             get { return cantPrestamos; }
             set { this.cantPrestamos = value; }
+        }
+
+        public void setLibro (Libro libro)
+        {
+            prestamoLibros.Add(libro);
         }
 
         //Override toString

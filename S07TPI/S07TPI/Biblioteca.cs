@@ -116,7 +116,7 @@ namespace S07TPI
                 {
                     if (lectores[indiceLector].CantPrestamos < CANTIDAD_PRESTAMOS)
                     {
-                        lectores[indiceLector].prestamoLibros.Add(libros[indiceLibro]);
+                        lectores[indiceLector].setLibro(libros[indiceLibro]);
                         lectores[indiceLector].CantPrestamos++;
                         libros.RemoveAt(indiceLibro);
                         return "Prestamo Exitoso";
