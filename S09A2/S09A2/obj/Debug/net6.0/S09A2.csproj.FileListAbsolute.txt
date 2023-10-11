@@ -1,0 +1,14 @@
+C:\Users\Pablo\Documents\C#\IFTSPOO\S09A2\S09A2\obj\Debug\net6.0\S09A2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pablo\Documents\C#\IFTSPOO\S09A2\S09A2\obj\Debug\net6.0\S09A2.AssemblyInfoInputs.cache
+C:\Users\Pablo\Documents\C#\IFTSPOO\S09A2\S09A2\obj\Debug\net6.0\S09A2.AssemblyInfo.cs
+C:\Users\Pablo\Documents\C#\IFTSPOO\S09A2\S09A2\obj\Debug\net6.0\S09A2.csproj.CoreCompileInputs.cache
+C:\Users\Pablo\Documents\C#\IFTSPOO\S09A2\S09A2\bin\Debug\net6.0\S09A2.exe
+C:\Users\Pablo\Documents\C#\IFTSPOO\S09A2\S09A2\bin\Debug\net6.0\S09A2.deps.json
+C:\Users\Pablo\Documents\C#\IFTSPOO\S09A2\S09A2\bin\Debug\net6.0\S09A2.runtimeconfig.json
+C:\Users\Pablo\Documents\C#\IFTSPOO\S09A2\S09A2\bin\Debug\net6.0\S09A2.dll
+C:\Users\Pablo\Documents\C#\IFTSPOO\S09A2\S09A2\bin\Debug\net6.0\S09A2.pdb
+C:\Users\Pablo\Documents\C#\IFTSPOO\S09A2\S09A2\obj\Debug\net6.0\S09A2.dll
+C:\Users\Pablo\Documents\C#\IFTSPOO\S09A2\S09A2\obj\Debug\net6.0\refint\S09A2.dll
+C:\Users\Pablo\Documents\C#\IFTSPOO\S09A2\S09A2\obj\Debug\net6.0\S09A2.pdb
+C:\Users\Pablo\Documents\C#\IFTSPOO\S09A2\S09A2\obj\Debug\net6.0\S09A2.genruntimeconfig.cache
+C:\Users\Pablo\Documents\C#\IFTSPOO\S09A2\S09A2\obj\Debug\net6.0\ref\S09A2.dll

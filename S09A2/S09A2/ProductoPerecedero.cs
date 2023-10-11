@@ -28,8 +28,19 @@ namespace S09A2
         //Calcular Precio
         public new decimal calcularPrecioTotal(int cantidadDeProductos)
         {            
-            return (this.Precio * cantidadDeProductos) / 4;
-        }
+            if (DiasACaducar == 1)
+            {
+                return (this.Precio * cantidadDeProductos) / 4;
+            }
 
+            if (DiasACaducar == 2)
+            {
+                return (this.Precio * cantidadDeProductos) / 3;
+            }
+
+            return (this.Precio * cantidadDeProductos) / 2;
+            
+        }
+               
     }
 }
