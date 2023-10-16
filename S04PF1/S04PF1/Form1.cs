@@ -1,3 +1,5 @@
+using S04PF1.Data;
+
 namespace S04PF1
 {
     public partial class Form1 : Form
@@ -55,15 +57,25 @@ namespace S04PF1
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUSER.Text == "pablo" &&  txtPASS.Text == "123456")
+            //if (txtUSER.Text == "pablo" &&  txtPASS.Text == "123456")
+            //{
+            //    Form formulario = new Form2();
+            //    formulario.ShowDialog();                
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Login Incorrecto", "Status", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+
+            if (!Users.validarUsuario(txtUSER.Text, txtPASS.Text))
             {
-                Form formulario = new Form2();
-                formulario.ShowDialog();                
+                MessageBox.Show("Login Incorrecto");
             }
             else
             {
-                MessageBox.Show("Login Incorrecto", "Status", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                Form formulario = new Form3();
+                formulario.ShowDialog(); 
+            };
         }
     }
 }
