@@ -24,7 +24,7 @@ namespace S04PF1.Data
                 //agrego los parametros para la ejecucion del comando, los valores estan en el obj ESocio que llega al método                
                 cmd.Parameters.Add("Nom", MySqlDbType.VarChar).Value = socio.nombre;
                 cmd.Parameters.Add("Ape", MySqlDbType.VarChar).Value = socio.apellido;
-                cmd.Parameters.Add("Dni", MySqlDbType.VarChar).Value = socio.dni;
+                cmd.Parameters.Add("inDni", MySqlDbType.Int64).Value = socio.dni;
                 cmd.Parameters.Add("Tel", MySqlDbType.VarChar).Value = socio.telefono;
                 cmd.Parameters.Add("Email", MySqlDbType.VarChar).Value = socio.email;
 

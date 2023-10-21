@@ -38,12 +38,12 @@ CREATE TABLE IF NOT EXISTS `club_deportivo`.`socios` (
   `idSocio` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NOT NULL,
   `apellido` VARCHAR(45) NOT NULL,
-  `dni` VARCHAR(45) NOT NULL,
+  `dni` INT NOT NULL,
   `telefono` VARCHAR(45) NULL DEFAULT NULL,
   `email` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`idSocio`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 5
+AUTO_INCREMENT = 7
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `club_deportivo`.`aptos` (
     FOREIGN KEY (`idSocio`)
     REFERENCES `club_deportivo`.`socios` (`idSocio`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 3
+AUTO_INCREMENT = 5
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -160,17 +160,19 @@ USE `club_deportivo` ;
 
 DELIMITER $$
 USE `club_deportivo`$$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `NuevoSocio`(in Nom varchar(45),in Ape varchar(45),in Dni varchar(45),in Tel varchar(45), in Email varchar(45), in historiaM varchar(150),
+CREATE DEFINER=`root`@`localhost` PROCEDURE `NuevoSocio`(in Nom varchar(45),in Ape varchar(45),in inDni int,in Tel varchar(45), in Email varchar(45), in historiaM varchar(150),
 			                 in fecha varchar(10), in alto decimal, in peso decimal, out rta int)
 begin
      declare existe int default 0;
      declare siguiente int default 0;
      
-     set existe = (select count(idSocio) from socios where dni = Dni);     
-	 
+     #set existe = (select count(idSocio) from socios where dni = Dni);
+     select count(dni) into existe from socios where dni = inDni;  
+	 #set existe = (select case when count(idSocio) > 0 then 1 else 0 end from socios where dni = Dni);
+
 	 if existe = 0 then	 
          #hago el insert en la tabla de socios.
-		 insert into socios values(null,Nom,Ape,Dni,Tel,Email);
+		 insert into socios values(null,Nom,Ape,inDni,Tel,Email);
          
          #busco el id de socio insertado para dar de alta en la tabla de aptos fisicos.
          select max(idSocio) into siguiente from socios;

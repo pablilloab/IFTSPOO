@@ -52,7 +52,7 @@ namespace S04PF1
                 ESocio socio = new ESocio();
                 socio.nombre = txtNombre.Text;
                 socio.apellido = txtApellido.Text;
-                socio.dni = txtDni.Text;
+                socio.dni = int.Parse(txtDni.Text);
                 socio.telefono = txtTelefono.Text;
                 socio.email = txtEmail.Text;
 
