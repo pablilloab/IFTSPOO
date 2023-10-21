@@ -15,7 +15,7 @@ namespace S04PF1.Data
 
         //Datos DB
         private string server = "localhost";
-        private string db = "instituto";
+        private string db = "club_deportivo";
         private string user = "root";
         private string password = "coqui123";
         private string port = "3306";
