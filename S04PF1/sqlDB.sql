@@ -32,6 +32,44 @@ COLLATE = utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
+-- Table `club_deportivo`.`socios`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `club_deportivo`.`socios` (
+  `idSocio` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NOT NULL,
+  `apellido` VARCHAR(45) NOT NULL,
+  `dni` VARCHAR(45) NOT NULL,
+  `telefono` VARCHAR(45) NULL DEFAULT NULL,
+  `email` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`idSocio`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 5
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
+-- Table `club_deportivo`.`aptos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `club_deportivo`.`aptos` (
+  `idApto` INT NOT NULL AUTO_INCREMENT,
+  `idSocio` INT NOT NULL,
+  `historiaM` VARCHAR(150) NOT NULL,
+  `fecha` VARCHAR(10) NOT NULL,
+  `alto` DECIMAL(10,0) NOT NULL,
+  `peso` DECIMAL(10,0) NOT NULL,
+  PRIMARY KEY (`idApto`),
+  INDEX `idsocio_idx` (`idSocio` ASC) VISIBLE,
+  CONSTRAINT `idSocioApto`
+    FOREIGN KEY (`idSocio`)
+    REFERENCES `club_deportivo`.`socios` (`idSocio`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 3
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+-- -----------------------------------------------------
 -- Table `club_deportivo`.`carnet`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `club_deportivo`.`carnet` (
@@ -58,23 +96,6 @@ COLLATE = utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
--- Table `club_deportivo`.`socios`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `club_deportivo`.`socios` (
-  `idSocio` INT NOT NULL AUTO_INCREMENT,
-  `nombre` VARCHAR(45) NOT NULL,
-  `apellido` VARCHAR(45) NOT NULL,
-  `dni` VARCHAR(45) NOT NULL,
-  `telefono` VARCHAR(45) NULL DEFAULT NULL,
-  `email` VARCHAR(45) NULL DEFAULT NULL,
-  PRIMARY KEY (`idSocio`))
-ENGINE = InnoDB
-AUTO_INCREMENT = 2
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
-
-
--- -----------------------------------------------------
 -- Table `club_deportivo`.`inscripcion`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `club_deportivo`.`inscripcion` (
@@ -83,7 +104,23 @@ CREATE TABLE IF NOT EXISTS `club_deportivo`.`inscripcion` (
   `idActividad` INT NOT NULL,
   `idCarnet` INT NOT NULL,
   `idCuota` INT NOT NULL,
-  PRIMARY KEY (`idInscripcion`))
+  PRIMARY KEY (`idInscripcion`),
+  INDEX `idSocio_idx` (`idSocio` ASC) VISIBLE,
+  INDEX `idActividad_idx` (`idActividad` ASC) VISIBLE,
+  INDEX `idCarnet_idx` (`idCarnet` ASC) VISIBLE,
+  INDEX `idCouta_idx` (`idCuota` ASC) VISIBLE,
+  CONSTRAINT `idActividad`
+    FOREIGN KEY (`idActividad`)
+    REFERENCES `club_deportivo`.`actividad` (`idActividad`),
+  CONSTRAINT `idCarnet`
+    FOREIGN KEY (`idCarnet`)
+    REFERENCES `club_deportivo`.`carnet` (`idCarnet`),
+  CONSTRAINT `idCouta`
+    FOREIGN KEY (`idCuota`)
+    REFERENCES `club_deportivo`.`cuota` (`idCuota`),
+  CONSTRAINT `idSocio`
+    FOREIGN KEY (`idSocio`)
+    REFERENCES `club_deportivo`.`socios` (`idSocio`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
@@ -123,20 +160,29 @@ USE `club_deportivo` ;
 
 DELIMITER $$
 USE `club_deportivo`$$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `NuevoSocio`(in Nom varchar(45),in Ape varchar(45),in Dni varchar(45), in Tel varchar(45), in Email varchar(45), out rta int)
+CREATE DEFINER=`root`@`localhost` PROCEDURE `NuevoSocio`(in Nom varchar(45),in Ape varchar(45),in Dni varchar(45),in Tel varchar(45), in Email varchar(45), in historiaM varchar(150),
+			                 in fecha varchar(10), in alto decimal, in peso decimal, out rta int)
 begin
      declare existe int default 0;
+     declare siguiente int default 0;
      
-     set existe = (select count(*) from socios where dni = Dni);     
+     set existe = (select count(idSocio) from socios where dni = Dni);     
 	 
 	 if existe = 0 then	 
+         #hago el insert en la tabla de socios.
 		 insert into socios values(null,Nom,Ape,Dni,Tel,Email);
+         
+         #busco el id de socio insertado para dar de alta en la tabla de aptos fisicos.
+         select max(idSocio) into siguiente from socios;
+         
+         #hago el insert en la tabla de apto fisico.
+         insert into aptos values(null,siguiente,historiaM,fecha,alto,peso);
+                  
 		 set rta  = 1;
 	 else
 		 set rta = 0;
 	 end if;		 
-    
-     end$$
+end$$
 
 DELIMITER ;
 

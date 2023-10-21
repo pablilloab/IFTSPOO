@@ -22,17 +22,27 @@ namespace S04PF1
         //Limpia los campos del ingreso con cadena vacia.
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            //Borro datos de Socio
             txtNombre.Text = "";
             txtApellido.Text = "";
             txtDni.Text = "";
             txtTelefono.Text = "";
             txtEmail.Text = "";
+
+            //Borro datos de Apto
+            txtHistoriaM.Text = "";
+            txtFecha.Text = "";
+            txtAltura.Text = "";
+            txtPeso.Text = "";
+
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             //Reviso que los campos no esten vacios
-            if(txtNombre.Text == "" || txtApellido.Text == "" || txtDni.Text == "" || txtTelefono.Text == "" || txtEmail.Text == "")
+            if (txtNombre.Text == "" || txtApellido.Text == "" || txtDni.Text == "" || txtTelefono.Text == "" || txtEmail.Text == "" || txtHistoriaM.Text == "" ||
+                txtFecha.Text == "" || txtAltura.Text == "" || txtPeso.Text == "")
             {
                 MessageBox.Show("Todos los campos deben estar completos");
             }
@@ -46,8 +56,14 @@ namespace S04PF1
                 socio.telefono = txtTelefono.Text;
                 socio.email = txtEmail.Text;
 
+                EApto apto = new EApto();
+                apto.historiaM = txtHistoriaM.Text;
+                apto.fecha = txtFecha.Text;
+                apto.alto = decimal.Parse(txtAltura.Text);
+                apto.peso = decimal.Parse(txtPeso.Text);
+
                 //Llamada a Socio con el objeto socio.
-                if(Socio.altaSocio(socio))
+                if (Socio.altaSocio(socio, apto))
                 {
                     MessageBox.Show("Alta de Socio Exitosa");
                 }
@@ -56,6 +72,26 @@ namespace S04PF1
                     MessageBox.Show("Socio existente");
                 }
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblAltaSocios_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
