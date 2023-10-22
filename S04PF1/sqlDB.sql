@@ -41,9 +41,10 @@ CREATE TABLE IF NOT EXISTS `club_deportivo`.`socios` (
   `dni` INT NOT NULL,
   `telefono` VARCHAR(45) NULL DEFAULT NULL,
   `email` VARCHAR(45) NULL DEFAULT NULL,
+  `carnet` TINYINT NULL DEFAULT '0',
   PRIMARY KEY (`idSocio`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 7
+AUTO_INCREMENT = 8
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -64,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `club_deportivo`.`aptos` (
     FOREIGN KEY (`idSocio`)
     REFERENCES `club_deportivo`.`socios` (`idSocio`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 5
+AUTO_INCREMENT = 6
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -172,7 +173,7 @@ begin
 
 	 if existe = 0 then	 
          #hago el insert en la tabla de socios.
-		 insert into socios values(null,Nom,Ape,inDni,Tel,Email);
+		 insert into socios values(null,Nom,Ape,inDni,Tel,Email,1);
          
          #busco el id de socio insertado para dar de alta en la tabla de aptos fisicos.
          select max(idSocio) into siguiente from socios;
