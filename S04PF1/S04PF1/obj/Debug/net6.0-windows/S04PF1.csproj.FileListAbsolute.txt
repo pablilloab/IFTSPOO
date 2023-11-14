@@ -3,7 +3,6 @@ C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\bin\Debug\net6.0-window
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\bin\Debug\net6.0-windows\S04PF1.runtimeconfig.json
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\bin\Debug\net6.0-windows\S04PF1.dll
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\bin\Debug\net6.0-windows\S04PF1.pdb
-C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.Form1.resources
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.Properties.Resources.resources
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.csproj.GenerateResource.cache
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.GeneratedMSBuildEditorConfig.editorconfig
@@ -15,7 +14,6 @@ C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-window
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.pdb
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.genruntimeconfig.cache
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\ref\S04PF1.dll
-C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.Form2.resources
 C:\Users\Pablo\Documents\C#\IFTSPOO\S04PF1\S04PF1\bin\Debug\net6.0-windows\S04PF1.exe
 C:\Users\Pablo\Documents\C#\IFTSPOO\S04PF1\S04PF1\bin\Debug\net6.0-windows\S04PF1.deps.json
 C:\Users\Pablo\Documents\C#\IFTSPOO\S04PF1\S04PF1\bin\Debug\net6.0-windows\S04PF1.runtimeconfig.json
@@ -73,6 +71,10 @@ C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\bin\Debug\net6.0-window
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\bin\Debug\net6.0-windows\runtimes\win-x64\native\krbcc64.dll
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.csproj.AssemblyReference.cache
-C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.Form3.resources
-C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.Form4.resources
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.csproj.CopyComplete
+C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.Login.resources
+C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.AltaActividad.resources
+C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.AltaProducto.resources
+C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.AltaSocio.resources
+C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.Menu.resources
+C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.CobroCuota.resources

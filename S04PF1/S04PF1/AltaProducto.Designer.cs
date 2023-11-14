@@ -1,6 +1,6 @@
 ﻿namespace S04PF1
 {
-    partial class Form2
+    partial class AltaProducto
     {
         /// <summary>
         /// Required designer variable.

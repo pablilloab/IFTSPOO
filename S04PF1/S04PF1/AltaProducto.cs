@@ -1,16 +1,16 @@
 ﻿namespace S04PF1
 {
-    public partial class Form2 : Form
+    public partial class AltaProducto : Form
     {
         int nro = 0; //variable global para tomar la fial con el producto a borrar
-        public Form2()
+        public AltaProducto()
         {
             InitializeComponent();
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            Form formulario = new Form1();
+            Form formulario = new Login();
             formulario.Show();
             this.Close();
         }

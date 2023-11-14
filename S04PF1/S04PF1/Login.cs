@@ -2,9 +2,9 @@ using S04PF1.Data;
 
 namespace S04PF1
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
@@ -73,7 +73,7 @@ namespace S04PF1
             }
             else
             {
-                Form formulario = new Form3();
+                Form formulario = new Menu();
                 formulario.ShowDialog(); 
             };
         }

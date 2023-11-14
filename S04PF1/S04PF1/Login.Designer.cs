@@ -1,6 +1,6 @@
 ﻿namespace S04PF1
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         ///  Required designer variable.

@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace S04PF1
 {
-    public partial class Form4 : Form
+    public partial class AltaSocio : Form
     {
-        public Form4()
+        public AltaSocio()
         {
             InitializeComponent();
         }

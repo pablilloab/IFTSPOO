@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace S04PF1
 {
-    public partial class Form3 : Form
+    public partial class Menu : Form
     {
-        public Form3()
+        public Menu()
         {
             InitializeComponent();
         }
@@ -29,7 +29,19 @@ namespace S04PF1
 
         private void btnAltaSocio_Click(object sender, EventArgs e)
         {
-            Form formulario = new Form4();
+            Form formulario = new AltaSocio();
+            formulario.ShowDialog();
+        }
+
+        private void btnCargaActividad_Click(object sender, EventArgs e)
+        {
+            Form formulario = new AltaActividad();
+            formulario.ShowDialog();
+        }
+
+        private void btnCobroCuota_Click(object sender, EventArgs e)
+        {
+            Form formulario = new CobroCuota();
             formulario.ShowDialog();
         }
     }
