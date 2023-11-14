@@ -35,10 +35,12 @@
             lblCodSocio = new Label();
             btnBuscar = new Button();
             dtgvCuota = new DataGridView();
+            idCuota = new DataGridViewTextBoxColumn();
             fechaCobro = new DataGridViewTextBoxColumn();
             monto = new DataGridViewTextBoxColumn();
             medioPago = new DataGridViewTextBoxColumn();
             estado = new DataGridViewTextBoxColumn();
+            lblInfo = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtgvCuota).BeginInit();
             SuspendLayout();
@@ -95,13 +97,18 @@
             // dtgvCuota
             // 
             dtgvCuota.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvCuota.Columns.AddRange(new DataGridViewColumn[] { fechaCobro, monto, medioPago, estado });
-            dtgvCuota.Location = new Point(176, 177);
+            dtgvCuota.Columns.AddRange(new DataGridViewColumn[] { idCuota, fechaCobro, monto, medioPago, estado });
+            dtgvCuota.Location = new Point(134, 182);
             dtgvCuota.Name = "dtgvCuota";
             dtgvCuota.RowTemplate.Height = 25;
-            dtgvCuota.Size = new Size(443, 174);
+            dtgvCuota.Size = new Size(543, 174);
             dtgvCuota.TabIndex = 24;
             dtgvCuota.CellContentClick += dtgvCuota_CellContentClick;
+            // 
+            // idCuota
+            // 
+            idCuota.HeaderText = "Nro. Cuota";
+            idCuota.Name = "idCuota";
             // 
             // fechaCobro
             // 
@@ -123,11 +130,21 @@
             estado.HeaderText = "Estado";
             estado.Name = "estado";
             // 
+            // lblInfo
+            // 
+            lblInfo.AutoSize = true;
+            lblInfo.Location = new Point(134, 391);
+            lblInfo.Name = "lblInfo";
+            lblInfo.Size = new Size(174, 15);
+            lblInfo.TabIndex = 25;
+            lblInfo.Text = "Click en Fecha para seleccionar.";
+            // 
             // CobroCuota
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblInfo);
             Controls.Add(dtgvCuota);
             Controls.Add(btnBuscar);
             Controls.Add(txtCodSocio);
@@ -136,6 +153,7 @@
             Controls.Add(pictureBox1);
             Name = "CobroCuota";
             Text = "CobroCuota";
+            Load += CobroCuota_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgvCuota).EndInit();
             ResumeLayout(false);
@@ -150,9 +168,11 @@
         private Label lblCodSocio;
         private Button btnBuscar;
         private DataGridView dtgvCuota;
+        private DataGridViewTextBoxColumn idCuota;
         private DataGridViewTextBoxColumn fechaCobro;
         private DataGridViewTextBoxColumn monto;
         private DataGridViewTextBoxColumn medioPago;
         private DataGridViewTextBoxColumn estado;
+        private Label lblInfo;
     }
 }

@@ -33,7 +33,7 @@ namespace S04PF1
                 Connection con = new Connection();
                 try
                 {
-                    string query = $"select c.fechaPago, c.monto, c.medioPago, c.pagoRealizado from cuota c inner join inscripcion i where i.idSocio = {id} and c.idCuota = i.idCuota;";
+                    string query = $"select c.idCuota, c.fechaPago, c.monto, c.medioPago, c.pagoRealizado from cuota c inner join inscripcion i where i.idSocio = {id} and c.idCuota = i.idCuota and c.pagoRealizado = 0;";
 
                     //creo el command e indico que tipo de comando es
                     MySqlCommand cmd = new MySqlCommand(query, con.getConnection());
@@ -85,18 +85,21 @@ namespace S04PF1
             if (rowNumber != -1)
             {
                 //guardo los datos de la cuota
-
-                string fecha = dtgvCuota.Rows[rowNumber].Cells[0].Value.ToString();
-                double.TryParse(dtgvCuota.Rows[rowNumber].Cells[1].Value.ToString(), out double monto);
-                string medioPago = dtgvCuota.Rows[rowNumber].Cells[2].Value.ToString();
+                int.TryParse(dtgvCuota.Rows[rowNumber].Cells[0].Value.ToString(), out int idCuota); //id de la cuota
+                DateTime fecha = DateTime.Parse(dtgvCuota.Rows[rowNumber].Cells[1].Value.ToString()); //fecha de cobro
+                double.TryParse(dtgvCuota.Rows[rowNumber].Cells[2].Value.ToString(), out double monto); //monto
+                string medioPago = dtgvCuota.Rows[rowNumber].Cells[3].Value.ToString(); //medio de pago cargado con la cuota
 
                 //TODO
-                //crear el formulariuo de llamada
-               
-                        
-                    
+                //crear el formulario de llamada
 
+                Form form = new ConfirmarPago(idCuota, fecha, monto, medioPago);
+                form.ShowDialog();
             }
+        }
+
+        private void CobroCuota_Load(object sender, EventArgs e)
+        {
 
         }
     }

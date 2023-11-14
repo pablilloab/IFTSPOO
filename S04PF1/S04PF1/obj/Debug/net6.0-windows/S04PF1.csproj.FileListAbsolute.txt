@@ -78,3 +78,4 @@ C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-window
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.AltaSocio.resources
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.Menu.resources
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.CobroCuota.resources
+C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.ConfirmarPago.resources
