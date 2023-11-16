@@ -44,5 +44,17 @@ namespace S04PF1
             Form formulario = new CobroCuota();
             formulario.ShowDialog();
         }
+
+        private void btnEntregaCarnet_Click(object sender, EventArgs e)
+        {
+            Form formulario = new Carnet();
+            formulario.ShowDialog();
+        }
+
+        private void btnListadoVencimiento_Click(object sender, EventArgs e)
+        {
+            Form formulario = new ListadoDeudores();
+            formulario.ShowDialog();
+        }
     }
 }

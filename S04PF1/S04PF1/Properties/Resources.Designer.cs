@@ -73,6 +73,16 @@ namespace S04PF1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap carnet {
+            get {
+                object obj = ResourceManager.GetObject("carnet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cobro_cuota {
             get {
                 object obj = ResourceManager.GetObject("cobro_cuota", resourceCulture);
@@ -83,9 +93,29 @@ namespace S04PF1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap deudores {
+            get {
+                object obj = ResourceManager.GetObject("deudores", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login {
             get {
                 object obj = ResourceManager.GetObject("login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_gym_carnet {
+            get {
+                object obj = ResourceManager.GetObject("logo_gym_carnet", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

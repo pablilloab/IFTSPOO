@@ -1,10 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Carnet.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="CobroCuota.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ConfirmarPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ImprimirCarnet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ListadoDeudores.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Login.cs">

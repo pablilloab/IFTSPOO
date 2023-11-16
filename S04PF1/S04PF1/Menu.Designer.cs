@@ -94,6 +94,7 @@
             btnEntregaCarnet.TabIndex = 8;
             btnEntregaCarnet.Text = "Entrega de Carnet";
             btnEntregaCarnet.UseVisualStyleBackColor = true;
+            btnEntregaCarnet.Click += btnEntregaCarnet_Click;
             // 
             // btnListadoVencimiento
             // 
@@ -104,6 +105,7 @@
             btnListadoVencimiento.TabIndex = 9;
             btnListadoVencimiento.Text = "Listado Vencimientos";
             btnListadoVencimiento.UseVisualStyleBackColor = true;
+            btnListadoVencimiento.Click += btnListadoVencimiento_Click;
             // 
             // lblAltaSocio
             // 
