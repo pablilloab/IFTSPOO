@@ -12,6 +12,11 @@ namespace S04PF1.Data
     {
         //Creo mi variable del tipo connection
         private  MySqlConnection con;
+        bool correcto = false;
+        private int mensaje;
+        //esta variable estatica la utilizamos para pedir los datos de conexion de la db una unica vez.
+        private static int cargaDatosDB = 0;
+       
 
         //Datos DB
         private string server = "localhost";
@@ -21,9 +26,48 @@ namespace S04PF1.Data
         private string port = "3306";
         private string stringConnection;
 
+        //*******************************************************************************
+        //*       SOLICITO LOS DATOS PARA LA CONEXION A LA DB                           *
+        //*******************************************************************************
+
+        private void pedirDatos()
+        {
+            while(correcto != true)
+            {
+                server = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el servidor", "Datos para conectar a la DB");
+                db = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nombre de la DB", "Datos para conectar a la DB");
+                user = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el usuario", "Datos para conectar a la DB");
+                password = Microsoft.VisualBasic.Interaction.InputBox("Ingrese la contraseña", "Datos para conectar a la DB");
+                port = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el puerto", "Datos para conectar a la DB");
+
+                mensaje = (int)MessageBox.Show("Si ingreso fue: SERVIDOR = " + server + " DB = " + db + " USER = " + user + " PASS = " + password + " PORT = " + port,
+                                               "SYSTEM ALERT!",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+                if(mensaje != 6)
+                {
+                    MessageBox.Show("Ingrese los datos nuevamente");
+                    correcto = false;
+                }
+                else
+                {
+                    cargaDatosDB++;
+                    correcto = true;    
+                }
+            }
+        }
+
+        //*******************************************************************************
+
         //Constructor de clase
         public Connection()
         {
+            //solicito los datos solo si es a primer ejecucion del programa.
+            if(cargaDatosDB == 0) 
+            { 
+                pedirDatos();
+            }
+
+
             //Armo la cadena de conexion
             stringConnection = "Database=" + db +
                 ";DataSource=" + server +
