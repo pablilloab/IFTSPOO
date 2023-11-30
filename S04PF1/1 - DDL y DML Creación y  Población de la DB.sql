@@ -1,3 +1,7 @@
+drop database if exists club_deportivo;
+create database club_deportivo;
+use club_deportivo;
+
 -- MySQL dump 10.13  Distrib 8.0.34, for Win64 (x86_64)
 --
 -- Host: localhost    Database: club_deportivo
@@ -248,3 +252,138 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2023-11-25  9:48:11
+
+-- -----------------------------------------------------
+-- procedure AltaActividad
+-- -----------------------------------------------------
+
+DELIMITER $$
+USE `club_deportivo`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `AltaActividad`(in IdAct int, in IdSoc int,in Tiempo int, in Dia int, in Monto decimal, out rta int)
+begin
+     declare existe int default 0;
+     declare siguienteC int default 0;
+     declare siguienteT int default 0;
+     declare itero int default 1;
+     declare dias int default 30;
+     
+     #busco si el socio ya existe cargado en esa actividad
+     select count(idInscripcion) into existe from inscripcion where idSocio = IdSoc and idActividad = IdAct;  
+	 
+
+	 if existe = 0 then	 
+		if Dia = 1 then
+			#hago el insert de la cuota        
+			insert into cuota values (null, curdate(), Monto, "contado",0);       
+        
+			#busco el ultimo id de cuota creado
+			select max(idCuota) into siguienteC from cuota;         
+			
+            #busco el ultimo carnet creado
+			select max(idCarnet) into siguienteT from carnet;
+            if siguienteT is null then
+				set siguienteT = 1;
+			else
+				set siguienteT = siguienteT + 1;
+			end if;
+            
+            #hago el insert en carnet
+			insert into carnet values (null, siguienteT);
+			
+        
+			#hago el insert en la tabla de socios.
+			insert into inscripcion values(null,IdSoc, IdAct, siguienteT, siguienteC);	
+			set rta  = 1;        
+        else
+			#hago el insert de la cuota (1) del mes
+			insert into cuota values (null, curdate(), Monto, "contado",0);             
+                    
+            #busco el ultimo id de cuota creado anteriormente
+			select max(idCuota) into siguienteC from cuota;              
+            set itero = itero + 1;
+                        
+			while(itero <= Tiempo) do
+				#hago el insert de la cuota        
+				insert into cuota (idCuota, fechaPago, monto, medioPago,pagoRealizado) values (siguienteC, date_add(curdate(), interval dias day), Monto,  "contado",0); 
+                set dias = dias + 30;
+                set itero = itero + 1;
+			end while;            
+            
+			#busco el ultimo carnet creado
+			select max(idCarnet) into siguienteT from carnet;
+            if siguienteT is null then
+				set siguienteT = 1;
+			else
+				set siguienteT = siguienteT + 1;
+			end if;
+            
+            #hago el insert en carnet
+			insert into carnet values (null, siguienteT);			
+        
+			#hago el insert en la tabla de socios.
+			insert into inscripcion values(null,IdSoc, IdAct, siguienteT, siguienteC);	
+			set rta  = 1;    
+            
+        end if;
+        
+	 else
+		set rta = 0;
+	 end if;		 
+end$$
+
+DELIMITER ;
+
+-- -----------------------------------------------------
+-- procedure NuevoSocio
+-- -----------------------------------------------------
+
+DELIMITER $$
+USE `club_deportivo`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `NuevoSocio`(in Nom varchar(45),in Ape varchar(45),in inDni int,in Tel varchar(45), in Email varchar(45), in historiaM varchar(150),
+			                 in fecha varchar(10), in alto decimal, in peso decimal, out rta int)
+begin
+     declare existe int default 0;
+     declare siguiente int default 0;
+     
+     #set existe = (select count(idSocio) from socios where dni = Dni);
+     select count(dni) into existe from socios where dni = inDni;  
+	 #set existe = (select case when count(idSocio) > 0 then 1 else 0 end from socios where dni = Dni);
+
+	 if existe = 0 then	 
+         #hago el insert en la tabla de socios.
+		 insert into socios values(null,Nom,Ape,inDni,Tel,Email,1);
+         
+         #busco el id de socio insertado para dar de alta en la tabla de aptos fisicos.
+         select max(idSocio) into siguiente from socios;
+         
+         #hago el insert en la tabla de apto fisico.
+         insert into aptos values(null,siguiente,historiaM,fecha,alto,peso);
+                  
+		 set rta  = 1;
+	 else
+		 set rta = 0;
+	 end if;		 
+end$$
+
+DELIMITER ;
+
+-- -----------------------------------------------------
+-- procedure checkLogin
+-- -----------------------------------------------------
+
+DELIMITER $$
+USE `club_deportivo`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `checkLogin`(in Usu varchar(20),in Pass varchar(15), out resultado int)
+begin    
+  
+  select count(NomRol) into resultado
+	from usuario u inner join roles r on u.RolUsu = r.RolUsu
+		where NombreUsu = Usu and PassUsu = Pass and Activo = 1;       
+
+end$$
+
+DELIMITER ;
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

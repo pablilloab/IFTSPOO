@@ -19,11 +19,11 @@ namespace S04PF1.Data
        
 
         //Datos DB
-        private string server = "localhost";
-        private string db = "club_deportivo";
-        private string user = "root";
-        private string password = "coqui123";
-        private string port = "3306";
+        //private string server = "localhost";
+        //private string db = "club_deportivo";
+        //private string user = "root";
+        //private string password = "coqui123";
+        //private string port = "3306";
         private string stringConnection;
 
         //*******************************************************************************
@@ -34,13 +34,13 @@ namespace S04PF1.Data
         {
             while(correcto != true)
             {
-                server = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el servidor", "Datos para conectar a la DB");
-                db = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nombre de la DB", "Datos para conectar a la DB");
-                user = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el usuario", "Datos para conectar a la DB");
-                password = Microsoft.VisualBasic.Interaction.InputBox("Ingrese la contraseña", "Datos para conectar a la DB");
-                port = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el puerto", "Datos para conectar a la DB");
+                DatosDB.server = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el servidor", "Datos para conectar a la DB");
+                DatosDB.db = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nombre de la DB", "Datos para conectar a la DB");
+                DatosDB.user = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el usuario", "Datos para conectar a la DB");
+                DatosDB.password = Microsoft.VisualBasic.Interaction.InputBox("Ingrese la contraseña", "Datos para conectar a la DB");
+                DatosDB.port = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el puerto", "Datos para conectar a la DB");
 
-                mensaje = (int)MessageBox.Show("Si ingreso fue: SERVIDOR = " + server + " DB = " + db + " USER = " + user + " PASS = " + password + " PORT = " + port,
+                mensaje = (int)MessageBox.Show("Si ingreso fue: SERVIDOR = " + DatosDB.server + " DB = " + DatosDB.db + " USER = " + DatosDB.user + " PASS = " + DatosDB.password + " PORT = " + DatosDB.port,
                                                "SYSTEM ALERT!",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
 
                 if(mensaje != 6)
@@ -69,10 +69,10 @@ namespace S04PF1.Data
 
 
             //Armo la cadena de conexion
-            stringConnection = "Database=" + db +
-                ";DataSource=" + server +
-                ";User Id=" + user + ";Password=" + password +
-                ";Port=" + port;             
+            stringConnection = "Database=" + DatosDB.db +
+                ";DataSource=" + DatosDB.server +
+                ";User Id=" + DatosDB.user + ";Password=" + DatosDB.password +
+                ";Port=" + DatosDB.port;             
         }
 
         public  MySqlConnection getConnection()

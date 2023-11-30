@@ -119,9 +119,17 @@ namespace S04PF1
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             //Id de Socio.
-            if (int.Parse(txtCodSocio.Text) != 0)
+            //if (int.Parse(txtCodSocio.Text) != 0)
+            //{
+            //    inscripcion.IdSocio = int.Parse(txtCodSocio.Text);
+            //}
+            //else
+            //{
+            //    datosValidos = false;
+            //}
+            if (int.TryParse(txtCodSocio.Text, out int idSocioParsed) && idSocioParsed != 0)
             {
-                inscripcion.IdSocio = int.Parse(txtCodSocio.Text);
+                inscripcion.IdSocio = idSocioParsed;
             }
             else
             {
@@ -129,9 +137,18 @@ namespace S04PF1
             }
 
             //Tiempo.
-            if(int.Parse(txtTiempo.Text) != 0)
+            //if(int.Parse(txtTiempo.Text) != 0)
+            //{
+            //    tiempo = int.Parse(txtTiempo.Text);
+            //}
+            //else
+            //{
+            //    datosValidos = false;
+            //}
+
+            if (int.TryParse(txtTiempo.Text, out int tiempoParsed) && tiempoParsed != 0)
             {
-                tiempo = int.Parse(txtTiempo.Text);
+                tiempo = tiempoParsed;
             }
             else
             {
@@ -139,7 +156,7 @@ namespace S04PF1
             }
 
             //Check si es x dia.
-            if(chkDia.Checked)
+            if (chkDia.Checked)
             {
                 dia = 1;
             }

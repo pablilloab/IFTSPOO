@@ -273,7 +273,7 @@
             txtPeso.Size = new Size(95, 21);
             txtPeso.TabIndex = 24;
             // 
-            // Form4
+            // AltaSocio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -301,8 +301,9 @@
             Controls.Add(txtNombre);
             Controls.Add(lblNombre);
             Controls.Add(lblAltaSocios);
-            Name = "Form4";
+            Name = "AltaSocio";
             Text = "Form4";
+            Load += AltaSocio_Load;
             ((System.ComponentModel.ISupportInitialize)picAltaSocio).EndInit();
             ResumeLayout(false);
             PerformLayout();

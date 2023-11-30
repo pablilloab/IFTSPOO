@@ -93,5 +93,10 @@ namespace S04PF1
         {
 
         }
+
+        private void AltaSocio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
