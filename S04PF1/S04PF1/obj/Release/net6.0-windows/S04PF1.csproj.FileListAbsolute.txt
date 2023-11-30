@@ -22,7 +22,6 @@ C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\bin\Release\net6.0-wind
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\bin\Release\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Release\net6.0-windows\S04PF1.csproj.AssemblyReference.cache
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Release\net6.0-windows\S04PF1.AltaActividad.resources
-C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Release\net6.0-windows\S04PF1.AltaProducto.resources
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Release\net6.0-windows\S04PF1.AltaSocio.resources
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Release\net6.0-windows\S04PF1.Carnet.resources
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Release\net6.0-windows\S04PF1.CobroCuota.resources

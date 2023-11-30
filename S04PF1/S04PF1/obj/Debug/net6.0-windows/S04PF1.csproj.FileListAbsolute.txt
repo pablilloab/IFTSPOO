@@ -74,7 +74,6 @@ C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-window
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.csproj.CopyComplete
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.Login.resources
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.AltaActividad.resources
-C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.AltaProducto.resources
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.AltaSocio.resources
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.Menu.resources
 C:\Users\pabab\OneDrive\Documentos\IFTSPOO\S04PF1\S04PF1\obj\Debug\net6.0-windows\S04PF1.CobroCuota.resources

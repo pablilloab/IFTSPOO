@@ -19,9 +19,6 @@
     <Compile Update="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="AltaProducto.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
